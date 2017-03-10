@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0dQ-Jc-UdC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpJ-Mv-pdd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VpJ-Mv-pdd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8m1-G7-4sD"/>
+                            <constraint firstItem="VpJ-Mv-pdd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TPi-Ja-6vh"/>
+                            <constraint firstAttribute="bottom" secondItem="VpJ-Mv-pdd" secondAttribute="bottom" id="hol-lG-pxk"/>
+                            <constraint firstAttribute="trailing" secondItem="VpJ-Mv-pdd" secondAttribute="trailing" id="xqy-Lf-ZAx"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem image="icon-back" id="yUw-pt-Uns">
+                            <connections>
+                                <action selector="goBack" destination="VpJ-Mv-pdd" id="bih-Tf-77Q"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="rqP-KL-gKv"/>
+                        <barButtonItem image="icon-forward" id="dAP-Et-Mvs">
+                            <connections>
+                                <action selector="goForward" destination="VpJ-Mv-pdd" id="e0W-CP-ujo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="XNG-kr-VPu"/>
+                        <barButtonItem systemItem="stop" id="klc-Z4-FgC">
+                            <connections>
+                                <action selector="stopLoading" destination="VpJ-Mv-pdd" id="v75-k7-E1Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="AtJ-U7-akY"/>
+                    <connections>
+                        <outlet property="buttonBack" destination="yUw-pt-Uns" id="g9U-hk-lXH"/>
+                        <outlet property="buttonForward" destination="dAP-Et-Mvs" id="1oM-ZZ-j5K"/>
+                        <outlet property="buttonStopRefresh" destination="klc-Z4-FgC" id="yAU-7V-2fM"/>
+                        <outlet property="viewWeb" destination="VpJ-Mv-pdd" id="4mv-Lc-Esp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o4q-Dm-mWy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="0dQ-Jc-UdC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IQ8-Fe-z8c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="vFE-Ob-DnG">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4bg-23-W9t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM5-qt-D4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-back" width="12" height="21"/>
+        <image name="icon-forward" width="12" height="21"/>
+    </resources>
+</document>
