@@ -15,7 +15,7 @@ class WebViewController: UIViewController {
     @IBOutlet weak var buttonForward: UIBarButtonItem!
     @IBOutlet weak var buttonStopRefresh: UIBarButtonItem!
     
-    var defaultURLString = "http://desivia.com";
+    var defaultURLString = "https://joelesli.com";
     
     @IBOutlet weak var viewWeb: UIWebView!
     
